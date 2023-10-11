@@ -57,7 +57,7 @@ public class Barang {
     // Pada kode diatas, hanya terdapat proses pengurangan jumlah stock saja. Buatlah sebuah method
     // baru, yang digunakan untuk melakukan proses penambahan stock barang.
     public void tambahStock(int ubah) {
-        System.out.println("Menu Penambahan Stock Barang");
+        System.out.println("Menu Penambahan Stock Barang " + nama );
         System.out.println("Stok awal : " + stock);
         this.stock = this.stock + ubah;
         System.out.println("Penambahan : " + ubah);
@@ -69,7 +69,7 @@ public class Barang {
     }
 
     public void jualStock(int ubah) {
-        System.out.println("Menu Penjualan Barang");
+        System.out.println("Menu Penjualan Barang " + nama );
         System.out.println("Stok awal : " + stock);
 
         this.stock = this.stock - ubah;
