@@ -42,7 +42,7 @@ public class Barang {
         pressEnter();
     }
 
-    public void jualStok(int ubah) {
+    public void jualStock(int ubah) {
         System.out.println("Menu Penjualan Barang");
         System.out.println("Stok awal : " + stock);
         this.stock = this.stock - ubah;
