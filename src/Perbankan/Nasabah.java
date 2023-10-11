@@ -49,7 +49,12 @@ public class Nasabah {
     private String alamatNasabah;
     private String noTelpNasabah;
     private String emailNasabah;
-    //    private Rekening rekening;
+        private Rekening rekening;
+
+    public Rekening getRekening() {
+        return rekening;
+    }
+
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
     public Nasabah(
@@ -61,7 +66,8 @@ public class Nasabah {
             String ttlNasabah,
             String alamatNasabah,
             String noTelpNasabah,
-            String emailNasabah
+            String emailNasabah,
+            Rekening rekening
     ) {
         this.idNasabah = idNasabah;
         this.namaNasabah = namaNasabah;
@@ -72,6 +78,7 @@ public class Nasabah {
         this.alamatNasabah = alamatNasabah;
         this.noTelpNasabah = noTelpNasabah;
         this.emailNasabah = emailNasabah;
+        this.rekening = rekening;
     }
 
     public void showDataNasabah() {
@@ -86,6 +93,7 @@ public class Nasabah {
         System.out.println("No Telp Nasabah : " + this.noTelpNasabah);
         System.out.println("Email Nasabah : " + this.emailNasabah);
         System.out.println();
+        this.rekening.showDetailRekening();
     }
 
     public static Nasabah registrasiNasabahBaru(BufferedReader input) {
@@ -127,6 +135,8 @@ public class Nasabah {
             System.out.println("Error : " + e.getMessage());
         }
 
+        Rekening rekening = Rekening.registrasiRekeningBaru(input);
+
         String idNasabah = "Nasabah" + (DataSource.listNasabah.size() + 1);
 
         return new Nasabah(
@@ -138,7 +148,8 @@ public class Nasabah {
                 ttlNasabah,
                 alamatNasabah,
                 noTelpNasabah,
-                emailNasabah
+                emailNasabah,
+                rekening
         );
     }
 

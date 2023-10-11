@@ -16,6 +16,13 @@ public class DataSource {
 
     }
     public static void initDatasource() {
+
+        Rekening rekening1 = new Rekening(
+                generateNoRek(),
+                "R001",
+                "123456",
+                1000000
+        );
         Nasabah nasabah1 = new Nasabah(
                 "N001",
                 "Rizky Khapidsyah",
@@ -25,16 +32,16 @@ public class DataSource {
                 "Jakarta, 20 Januari 2000",
                 "Jl. Kebon Jeruk Raya No. 20",
                 "081234567890",
-                "rizkypasuruan@gmail.com"
-        );
-        Rekening rekening1 = new Rekening(
-                generateNoRek(),
-                "R001",
-                "123456",
-                1000000,
-                nasabah1
+                "rizkypasuruan@gmail.com",
+                rekening1
         );
 
+        Rekening rekening2 = new Rekening(
+                generateNoRek(),
+                "R002",
+                "123123",
+                10000000
+        );
         Nasabah nasabah2 = new Nasabah(
                 "N002",
                 "Rifqy Arrasssy",
@@ -44,15 +51,10 @@ public class DataSource {
                 "Jakarta, 20 Januari 2005",
                 "Jl. Jalan Jalan",
                 "08123124124",
-                "rifqieslilin@gmail.com"
+                "rifqieslilin@gmail.com",
+                rekening2
         );
-        Rekening rekening2 = new Rekening(
-                generateNoRek(),
-                "R002",
-                "123123",
-                10000000,
-                nasabah2
-        );
+
 
         listNasabah.add(nasabah1);
         listNasabah.add(nasabah2);
@@ -69,17 +71,16 @@ public class DataSource {
         System.out.println("_______________________________________________________________________________________");
         System.out.format("%8s %20s %50s \n", "ID Nasabah", "No Rekening", "Nama Nasabah");
         System.out.println("_______________________________________________________________________________________");
-//        System.out.println("ID Nasabah | No Rekening | Nama Nasabah");
-        listRekening
+        listNasabah
                 .stream()
                 .iterator()
                 .forEachRemaining(
-                        rekening -> {
-                            String idNasabah = rekening.getNasabah().getIdNasabah();
-                            String noRekeningNasabah = rekening.getNoRekening();
-                            String namaNasabah = rekening.getNasabah().getNamaNasabah();
+                        nasabah -> {
+                            String idNasabah = nasabah.getIdNasabah();
+                            String noRekeningNasabah = nasabah.getRekening().getNoRekening();
+                            String namaNasabah = nasabah.getNamaNasabah();
                             System.out.format("%10s %20s %50s \n", idNasabah, noRekeningNasabah, namaNasabah);
-//                            System.out.println(rekening.getNasabah().getIdNasabah() + " | " + rekening.getNoRekening() + " | " + rekening.getNasabah().getNamaNasabah());
+
                         }
                 );
 

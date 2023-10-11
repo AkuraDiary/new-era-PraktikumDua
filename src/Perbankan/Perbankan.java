@@ -32,7 +32,7 @@ public class Perbankan {
         while (true) {
             System.out.println();
             System.out.println("===== MENU UTAMA =====");
-            System.out.println("Masukkan [IdNasabah] untuk login");
+            System.out.println("Masukkan [IdNasabah] untuk memilih nasabah");
             System.out.println("Masukkan 0 / [exit] untuk keluar");
             System.out.println("Masukkan [register] untuk registrasi nasabah & rekening baru");
             System.out.println("Masukkan [fetch] untuk melihat data nasabah & rekening");
@@ -81,11 +81,9 @@ public class Perbankan {
     }
 
     private static void registerNasabah() {
-
         Nasabah nasabahBaru  = Nasabah.registrasiNasabahBaru(inputAplikasi);
-        Rekening rekeningBaru = Rekening.registrasiRekeningBaru(nasabahBaru, inputAplikasi);
         DataSource.listNasabah.add(nasabahBaru);
-        DataSource.listRekening.add(rekeningBaru);
+        DataSource.listRekening.add(nasabahBaru.getRekening());
         System.out.println();
         System.out.println("REGISTRASI BERHASIL");
         System.out.println();
@@ -116,8 +114,8 @@ public class Perbankan {
 
                     case "1", "saldo":
                         System.out.println("===== LIHAT SALDO =====");
-//                        System.out.println("Saldo anda : " + formatRupiah(tempSelectedNasabah.getRekening().getSaldoRekening()));
-                        System.out.println("===== LIHAT SALDO =====");
+                        System.out.println("Saldo anda : " + formatRupiah(tempSelectedNasabah.getRekening().getSaldoRekening()));
+                        System.out.println();
                         break;
 
                     case "2", "setor":
@@ -125,7 +123,7 @@ public class Perbankan {
                         System.out.println("Masukkan nominal saldo yang ingin anda setor");
                         System.out.print("Input : ");
                         double nominalSetor = Double.parseDouble(inputAplikasi.readLine());
-//                        tempSelectedNasabah.getRekening().setorSaldo(nominalSetor);
+                        tempSelectedNasabah.getRekening().setorSaldo(nominalSetor);
                         System.out.println("===== SETOR SALDO =====");
                         break;
 
@@ -137,7 +135,7 @@ public class Perbankan {
                         System.out.println("Masukkan pin anda");
                         System.out.print("Input : ");
                         String pinTarik = inputAplikasi.readLine();
-//                        tempSelectedNasabah.getRekening().tarikSaldo(nominalTarik, pinTarik);
+                        tempSelectedNasabah.getRekening().tarikSaldo(nominalTarik, pinTarik);
                         System.out.println("===== TARIK SALDO =====");
                         break;
 
@@ -153,7 +151,6 @@ public class Perbankan {
             } catch (IOException e) {
                 System.out.println("Error : " + e.getMessage());
             }
-            System.out.println();
 
         }
     }
