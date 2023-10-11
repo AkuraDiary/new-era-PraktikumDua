@@ -7,7 +7,7 @@
 
 Berikan contoh minimal 3 implementasi dari kedua jenis parameter diatas
 
-Contoh :
+Contoh Implementasi (actual code ada di Pendahuluan.java):
 
 1.)
 
@@ -20,6 +20,11 @@ Contoh :
 
     // pada saat fungsi dipanggil
     int result = F(2, 3); // 2 dan 3 adalah parameter aktual
+
+    // dalam pemanggilan method tersebut
+    // parameter x & y (sebagai parameter formal) digunakan untuk
+    // menampung nilai 2 & 3 (yang disebut parameter actual)
+    // yang di berikan saat memanggil method tersebut
 
 2.)
     double luasSegitiga(

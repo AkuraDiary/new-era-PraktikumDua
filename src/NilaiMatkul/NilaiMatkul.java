@@ -4,6 +4,18 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class NilaiMatkul {
+
+//    Buatlah sebuah aplikasi yang dapat digunakan
+//    untuk melakukan perhitungan nilai mata kuliah.
+//    Nilai didapatkan dari komponen perhitungan berikut ini
+
+//    a. Bobot assessment 1 : 15%
+//    b. Bobot assessment 2 : 15%
+//    c. Bobot assessment 3 : 10%
+//    d. Bobot Tugas : 40%
+//    e. Bobot Praktikum : 20%
+//
+
     public static void main(String[] args) {
      NilaiMK nilaiMatkul = new NilaiMK();
      nilaiMatkul.inputData();
