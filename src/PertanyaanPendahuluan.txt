@@ -50,9 +50,9 @@ Contoh :
 
    Gunakan Method untuk perhitungan fungsi diatas
 
-public class Main {
+public class NilaiMatkul.NilaiMatkul {
     public static void main(String[] args) {
-        Main main = new Main();
+        NilaiMatkul.NilaiMatkul main = new NilaiMatkul.NilaiMatkul();
         int result = main.F(2, 3);
         System.out.println(result);
     }
