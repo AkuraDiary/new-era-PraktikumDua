@@ -4,8 +4,40 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class Nasabah {
+    public String getKtpNasabah() {
+        return ktpNasabah;
+    }
 
+    public String getNamaNasabah() {
+        return namaNasabah;
+    }
+    public String getIdNasabah() {
+        return idNasabah;
+    }
 
+    public int getUmurNasabah() {
+        return umurNasabah;
+    }
+
+    public String getJenisKelaminNasabah() {
+        return jenisKelaminNasabah;
+    }
+
+    public String getTtlNasabah() {
+        return ttlNasabah;
+    }
+
+    public String getAlamatNasabah() {
+        return alamatNasabah;
+    }
+
+    public String getNoTelpNasabah() {
+        return noTelpNasabah;
+    }
+
+    public String getEmailNasabah() {
+        return emailNasabah;
+    }
 
     private String idNasabah;
     private String namaNasabah;
@@ -39,13 +71,6 @@ public class Nasabah {
         this.alamatNasabah = alamatNasabah;
         this.noTelpNasabah = noTelpNasabah;
         this.emailNasabah = emailNasabah;
-    }
-
-    public String getNamaNasabah() {
-        return namaNasabah;
-    }
-    public String getIdNasabah() {
-        return idNasabah;
     }
 
     public void showDataNasabah() {
@@ -101,7 +126,7 @@ public class Nasabah {
             System.out.println("Error : " + e.getMessage());
         }
 
-        idNasabah = "Nasabah" + (Perbankan.listNasabah.size() + 1);
+        idNasabah = "Nasabah" + (DataSource.listNasabah.size() + 1);
 
         return new Nasabah(
                 idNasabah,

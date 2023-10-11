@@ -2,9 +2,27 @@ package Perbankan;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Random;
 
 public class Rekening {
     private String noRekening;
+
+    public String getNoRekening() {
+        return noRekening;
+    }
+
+    public String getIdRekening() {
+        return idRekening;
+    }
+
+    public double getSaldoRekening() {
+        return saldoRekening;
+    }
+
+    public Nasabah getNasabah() {
+        return nasabah;
+    }
+
     private String idRekening;
     private String pinRekening;
     private double saldoRekening;
@@ -23,7 +41,7 @@ public class Rekening {
         System.out.println("=== DATA REKENING ANDA ===");
         System.out.println("No Rekening : " + this.noRekening);
         System.out.println("ID Rekening : " + this.idRekening);
-        System.out.println("Saldo Rekening : " + this.saldoRekening);
+        System.out.println("Saldo Rekening : " + Perbankan.formatRupiah(this.saldoRekening));
         nasabah.showDataNasabah();
         System.out.println();
     }
@@ -35,7 +53,7 @@ public class Rekening {
         System.out.println("Nominal Setoran : " + setoran);
         this.saldoRekening += setoran;
         System.out.println("Setoran Berhasil");
-        System.out.println("Saldo Rekening : " + this.saldoRekening);
+        System.out.println("Saldo Rekening : " + Perbankan.formatRupiah(this.saldoRekening));
         System.out.println();
     }
 
@@ -49,7 +67,7 @@ public class Rekening {
             if (nominal <= this.saldoRekening) {
                 this.saldoRekening -= nominal;
                 System.out.println("Penarikan Berhasil");
-                System.out.println("Saldo Rekening : " + this.saldoRekening);
+                System.out.println("Saldo Rekening : " + Perbankan.formatRupiah(this.saldoRekening));
             } else {
                 System.out.println("Penarikan Gagal, Saldo Tidak Mencukupi");
             }
@@ -70,8 +88,8 @@ public class Rekening {
             System.out.println("=== REGISTRASI REKENING BARU ===");
             nasabah.showDataNasabah();
 
-            System.out.print("No Rekening : ");
-            noRekening = input.readLine();
+//            System.out.print("No Rekening : ");
+//            noRekening = input.readLine();
 
             System.out.println("PIN Rekening : ");
             pinRekening = input.readLine();
@@ -82,6 +100,11 @@ public class Rekening {
         } catch (Exception e) {
             System.out.println("Error : " + e.getMessage());
         }
+        // generate random value for nomorRekening with 17 digits
+        Random rand = new Random();
+        long x = (long)(rand.nextDouble()*100000000000000L);
+        noRekening =  String.format("%017d", x);
+
         String idRekening = nasabah.getIdNasabah() + noRekening;
         return new Rekening(
                 noRekening,
@@ -91,4 +114,5 @@ public class Rekening {
                 nasabah
         );
     }
+
 }
