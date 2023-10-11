@@ -156,7 +156,7 @@ public class Perbankan {
     }
 
     public static String formatRupiah(double nominal) {
-        String hasil = String.format("%,.2f", nominal).replaceAll(",", ".");
-        return "Rp. " + hasil;
+        String hasil = String.format("%,.0f", nominal).replaceAll(",", ".");
+        return "Rp" + hasil;
     }
 }
