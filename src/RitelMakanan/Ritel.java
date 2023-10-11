@@ -20,7 +20,10 @@ public class Ritel {
         brg1.inputData();
         brg2.inputData();
 
+        brg1.tambahStock(50);
         brg1.jualStock(33);
+
+        brg2.tambahStock(55);
         brg2.jualStock(45);
 
         brg1.viewData();

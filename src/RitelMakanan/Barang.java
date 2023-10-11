@@ -54,18 +54,46 @@ public class Barang {
         pressEnter();
     }
 
-    public void jualStock(int ubah) {
-        System.out.println("Menu Penjualan Barang");
+    // Pada kode diatas, hanya terdapat proses pengurangan jumlah stock saja. Buatlah sebuah method
+    // baru, yang digunakan untuk melakukan proses penambahan stock barang.
+    public void tambahStock(int ubah) {
+        System.out.println("Menu Penambahan Stock Barang");
         System.out.println("Stok awal : " + stock);
-        this.stock = this.stock - ubah;
-        System.out.println("Pengurangan : " + ubah);
+        this.stock = this.stock + ubah;
+        System.out.println("Penambahan : " + ubah);
+
         System.out.println("Stok akhir : " + stock);
+
         System.out.println("Data telah diubah");
         pressEnter();
     }
 
-    private void pressEnter() {
+    public void jualStock(int ubah) {
+        System.out.println("Menu Penjualan Barang");
+        System.out.println("Stok awal : " + stock);
 
+        this.stock = this.stock - ubah;
+
+        System.out.println("Harga satuan : " + hargaJual);
+        System.out.println("Pengurangan : " + ubah);
+
+        // Tambahan untuk total harga yang harus dibayarkan
+        int totalHarga = hitungTotalHarga(ubah);
+        System.out.println("Total harga yang harus dibayarkan: " + totalHarga);
+
+        System.out.println("Stok akhir : " + stock);
+
+        System.out.println("Data telah diubah");
+        pressEnter();
+    }
+
+    // method untuk menghitung total harga, dengan parameter jumlah
+    // jumlah * hargaJual
+    int hitungTotalHarga(int jumlah) {
+        return jumlah * this.hargaJual;
+    }
+
+    private void pressEnter() {
         try {
             System.out.println("Tekan enter untuk melanjutkan");
             input.readLine();
