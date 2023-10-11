@@ -137,7 +137,7 @@ public class Nasabah {
 
         Rekening rekening = Rekening.registrasiRekeningBaru(input);
 
-        String idNasabah = "Nasabah" + (DataSource.listNasabah.size() + 1);
+        String idNasabah = "N00" + (DataSource.listNasabah.size() + 1);
 
         return new Nasabah(
                 idNasabah,
