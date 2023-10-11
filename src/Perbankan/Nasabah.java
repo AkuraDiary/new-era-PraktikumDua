@@ -1,12 +1,8 @@
 package Perbankan;
 
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
 
 public class Nasabah {
-    public String getKtpNasabah() {
-        return ktpNasabah;
-    }
 
     public String getNamaNasabah() {
         return namaNasabah;
@@ -16,46 +12,20 @@ public class Nasabah {
         return idNasabah;
     }
 
-    public int getUmurNasabah() {
-        return umurNasabah;
-    }
-
-    public String getJenisKelaminNasabah() {
-        return jenisKelaminNasabah;
-    }
-
-    public String getTtlNasabah() {
-        return ttlNasabah;
-    }
-
-    public String getAlamatNasabah() {
-        return alamatNasabah;
-    }
-
-    public String getNoTelpNasabah() {
-        return noTelpNasabah;
-    }
-
-    public String getEmailNasabah() {
-        return emailNasabah;
-    }
-
-    private String idNasabah;
-    private String namaNasabah;
-    private String ktpNasabah;
-    private int umurNasabah;
-    private String jenisKelaminNasabah;
-    private String ttlNasabah;
-    private String alamatNasabah;
-    private String noTelpNasabah;
-    private String emailNasabah;
-        private Rekening rekening;
+    private final String idNasabah;
+    private final String namaNasabah;
+    private final String ktpNasabah;
+    private final int umurNasabah;
+    private final String jenisKelaminNasabah;
+    private final String ttlNasabah;
+    private final String alamatNasabah;
+    private final String noTelpNasabah;
+    private final String emailNasabah;
+        private final Rekening rekening;
 
     public Rekening getRekening() {
         return rekening;
     }
-
-    BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
     public Nasabah(
             String idNasabah,

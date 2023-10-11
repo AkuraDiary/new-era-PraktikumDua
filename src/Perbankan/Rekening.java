@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.Random;
 
 public class Rekening {
-    private String noRekening;
+    private final String noRekening;
 
     public String getNoRekening() {
         return noRekening;
@@ -23,8 +23,8 @@ public class Rekening {
 //        return nasabah;
 //    }
 
-    private String idRekening;
-    private String pinRekening;
+    private final String idRekening;
+    private final String pinRekening;
     private double saldoRekening;
 //    private Nasabah nasabah;
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
