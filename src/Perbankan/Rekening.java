@@ -78,7 +78,7 @@ public class Rekening {
         System.out.println();
     }
 
-    public Rekening registrasiRekeningBaru(Nasabah nasabah) {
+    public static Rekening registrasiRekeningBaru(Nasabah nasabah, BufferedReader input) {
 
         String noRekening = "";
         String pinRekening = "";
@@ -91,7 +91,7 @@ public class Rekening {
 //            System.out.print("No Rekening : ");
 //            noRekening = input.readLine();
 
-            System.out.println("PIN Rekening : ");
+            System.out.print("PIN Rekening : ");
             pinRekening = input.readLine();
 
             System.out.print("Saldo Awal Rekening : ");

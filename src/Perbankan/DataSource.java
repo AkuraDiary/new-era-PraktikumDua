@@ -82,6 +82,9 @@ public class DataSource {
 //                            System.out.println(rekening.getNasabah().getIdNasabah() + " | " + rekening.getNoRekening() + " | " + rekening.getNasabah().getNamaNasabah());
                         }
                 );
+
+        System.out.println("_______________________________________________________________________________________");
+        System.out.println();
     }
 
 }

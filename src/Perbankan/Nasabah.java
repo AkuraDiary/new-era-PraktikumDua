@@ -11,6 +11,7 @@ public class Nasabah {
     public String getNamaNasabah() {
         return namaNasabah;
     }
+
     public String getIdNasabah() {
         return idNasabah;
     }
@@ -87,7 +88,7 @@ public class Nasabah {
         System.out.println();
     }
 
-    public Nasabah registrasiNasabahBaru() {
+    public static Nasabah registrasiNasabahBaru(BufferedReader input) {
         System.out.println("=== REGISTRASI NASABAH BARU ===");
         String namaNasabah = null;
         String ktpNasabah = null;
@@ -126,7 +127,7 @@ public class Nasabah {
             System.out.println("Error : " + e.getMessage());
         }
 
-        idNasabah = "Nasabah" + (DataSource.listNasabah.size() + 1);
+        String idNasabah = "Nasabah" + (DataSource.listNasabah.size() + 1);
 
         return new Nasabah(
                 idNasabah,
