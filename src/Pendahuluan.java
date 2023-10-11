@@ -1,3 +1,14 @@
+//1. Apakah yang dimaksud dengan :
+//        a. Parameter formal : adalah parameter yang ada saat pembuatan fungsi
+//        berperan sebagai wadah untuk menampung nilai yang dikirimkan saat pemanggilan fungsi
+//
+//        b. Parameter aktual : adalah parameter yang ada saat pemanggilan fungsi
+//        yaitu nilai yang digunakan untuk mengisi parameter formal atau memanggil fungsi tersebut
+//
+//        Berikan contoh minimal 3 implementasi dari kedua jenis parameter diatas
+//
+//        Contoh Implementasi (actual code ada di Pendahuluan.java):
+
 public class Pendahuluan {
 
 
@@ -43,7 +54,7 @@ public class Pendahuluan {
         System.out.println("method F : " + resultMethodF);
 
         // pada saat method formatRupiah(nominal) dipanggil
-        String resultFormatRupiah = formatRupiah(10000); // 10000 adalah parameter aktual
+        String resultFormatRupiah = formatRupiah(10000 ); // 10000 adalah parameter aktual
         System.out.println("method formatRupiah : " + resultFormatRupiah);
 
         // pada saat method luasSegitiga(alas, tinggi) dipanggil

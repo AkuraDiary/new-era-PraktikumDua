@@ -13,7 +13,7 @@ import java.util.ArrayList;
 // Catatan :
 //  1. Tentukan parameter-parameter yang dibutuhkan pada setiap fungsionalitas diatas.
 //  2. Proses pengecekan kecukupan saldo belum dibutuhkan pada bagian ini.
-public class BankTelkom {
+public class Perbankan {
 
     static ArrayList<Nasabah> listNasabah = new ArrayList<Nasabah>();
     static ArrayList<Rekening> listRekening = new ArrayList<Rekening>();
