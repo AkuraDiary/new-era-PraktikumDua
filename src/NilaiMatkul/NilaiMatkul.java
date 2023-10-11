@@ -15,6 +15,17 @@ public class NilaiMatkul {
 //    d. Bobot Tugas : 40%
 //    e. Bobot Praktikum : 20%
 //
+    // Pengamatan
+    // Gabungkan kode program diatas, sehingga dapat menjadi sebuah kode program yang lengkap.
+
+    // Pada method hitungNilai(), proses perhitungan masih dilakukan
+    // secara parsial untuk masing- masing komponen nilai. Ubahlah method tersebut,
+    // sehingga hanya akan terdapat 1 baris perhitungan nilai.
+
+    // Pada kode program diatas, terdapat beberapa pengaksesan variabel dengan menggunakan
+    // keyword this.
+    //      a. Apakah yang dimaksud dengan keyword this.
+    //      b. Jelaskan mengenai penggunaan kode tersebut.
 
     public static void main(String[] args) {
      NilaiMK nilaiMatkul = new NilaiMK();

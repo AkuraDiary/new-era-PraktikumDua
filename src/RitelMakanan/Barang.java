@@ -5,6 +5,18 @@ import java.io.InputStreamReader;
 
 public class Barang {
 
+    // Pengamatan
+    // Gabungkan kode program diatas, sehingga dapat menjadi sebuah kode program yang lengkap. (done)
+
+    // Pada proses penjualan barang (method jualStock()),
+    // masih belum didapatkan total harga yang harus dibayarkan pada saat proses jual barang.
+    // Tambahkan kode baru, yang digunakan untuk menghitung besaran harga
+    // yang harus dibayarkan pada transaksi tersebut.
+    // Silahkan menyisipkan pada kode yang telah ada, atau membuat sebuah method baru pada kelas barang.
+
+    // Pada kode diatas, hanya terdapat proses pengurangan jumlah stock saja. Buatlah sebuah method
+    // baru, yang digunakan untuk melakukan proses penambahan stock barang.
+
     String kode;
     String nama;
     int stock;
@@ -54,11 +66,11 @@ public class Barang {
 
     private void pressEnter() {
 
-        try{
+        try {
             System.out.println("Tekan enter untuk melanjutkan");
             input.readLine();
 
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
