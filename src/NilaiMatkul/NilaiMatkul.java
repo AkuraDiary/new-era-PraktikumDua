@@ -27,7 +27,11 @@ class NilaiMK {
 
         try {
             System.out.print("NIM : ");
+            // penggunaan keyword 'this.' menandakan
+            // bahwa variabel yang yang diakses (dalam hal ini variable nim)
+            // adalah instance variabel yang ada di class ini
             this.nim = inp.readLine();
+
 
             System.out.print("Nilai assessment 1 : ");
             this.a1 = Integer.parseInt(inp.readLine());
@@ -53,11 +57,14 @@ class NilaiMK {
 
     void hitungNilai(int a1, int a2, int a3, int tugas, int prakt) {
 
-        this.nilai = (0.15 * a1);
-        this.nilai = nilai + (0.15 * a2);
-        this.nilai = nilai + (0.1 * a3);
-        this.nilai = nilai + (0.2 * tugas);
-        this.nilai = nilai + (0.4 * prakt);
+//        this.nilai = (0.15 * a1);
+//        this.nilai = nilai + (0.15 * a2);
+//        this.nilai = nilai + (0.1 * a3);
+//        this.nilai = nilai + (0.2 * tugas);
+//        this.nilai = nilai + (0.4 * prakt);
+
+        // ubahlah menjadi 1 liner calculation
+        this.nilai = (0.15 * a1) + (0.15 * a2) + (0.1 * a3) +  (0.2 * tugas) + (0.4 * prakt);
 
     }
 
