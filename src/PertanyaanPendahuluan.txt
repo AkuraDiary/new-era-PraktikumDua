@@ -1,0 +1,63 @@
+1. Apakah yang dimaksud dengan :
+    a. Parameter formal : adalah parameter yang ada saat pembuatan fungsi
+    berperan sebagai wadah untuk menampung nilai yang dikirimkan saat pemanggilan fungsi
+
+    b. Parameter aktual : adalah parameter yang ada saat pemanggilan fungsi
+    yaitu nilai yang digunakan untuk mengisi parameter formal atau memanggil fungsi tersebut
+
+Berikan contoh minimal 3 implementasi dari kedua jenis parameter diatas
+
+Contoh :
+
+1.)
+
+    int F(
+        int x, // x disini adalah parameter formal
+        int y // y disini adalah parameter formal
+    ){
+        return (x*y)+(2*x)+(2*y)+6;
+    }
+
+    // pada saat fungsi dipanggil
+    int result = F(2, 3); // 2 dan 3 adalah parameter aktual
+
+2.)
+    double luasSegitiga(
+        int alas, // alas disini adalah parameter formal
+        int tinggi // tinggi disini adalah parameter formal
+    ){
+           return (alas*tinggi)/2;
+    }
+
+    // pada saat fungsi dipanggil
+    double result = luasSegitiga(2, 3); // 2 dan 3 adalah parameter aktual
+
+3.)
+
+   String formatRupiah(
+       int nominal // nominal disini adalah parameter formal
+   ){
+         return "Rp. " + nominal;
+   }
+
+    // pada saat fungsi dipanggil
+    String result = formatRupiah(10000); // 10000 adalah parameter aktual
+
+
+2. Buatlah sebuah aplikasi yang dapat digunakan untuk menghitung rumus fungsi berikut ini
+   Nilai F(x,y)
+   untuk F(x,y)=xy+2x+2y+6
+
+   Gunakan Method untuk perhitungan fungsi diatas
+
+public class Main {
+    public static void main(String[] args) {
+        Main main = new Main();
+        int result = main.F(2, 3);
+        System.out.println(result);
+    }
+
+   int F(int x, int y){
+       return (x*y)+(2*x)+(2*y)+6;
+   }
+}
